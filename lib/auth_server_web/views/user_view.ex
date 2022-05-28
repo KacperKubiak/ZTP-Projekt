@@ -18,10 +18,6 @@ defmodule AuthServerWeb.UserView do
       name: user.name,
       secret: user.secret,
       exp: user.exp,
-      -: user.-,
-      no-context: user.no-context,
-      -: user.-,
-      no-schema: user.no-schema
     }
   end
 end

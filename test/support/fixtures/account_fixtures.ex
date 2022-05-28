@@ -1,7 +1,7 @@
-defmodule AuthServer.AccountFixtures do
+defmodule AuthServer.AccountsFixtures do
   @moduledoc """
   This module defines test helpers for creating
-  entities via the `AuthServer.Account` context.
+  entities via the `AuthServer.Accounts` context.
   """
 
   @doc """
@@ -17,7 +17,7 @@ defmodule AuthServer.AccountFixtures do
         secret: "some secret",
         token: "some token"
       })
-      |> AuthServer.Account.create_user()
+      |> AuthServer.Accounts.create_user()
 
     user
   end
@@ -38,7 +38,7 @@ defmodule AuthServer.AccountFixtures do
         secret: "some secret",
         token: "some token"
       })
-      |> AuthServer.Account.create_user()
+      |> AuthServer.Accounts.create_user()
 
     user
   end

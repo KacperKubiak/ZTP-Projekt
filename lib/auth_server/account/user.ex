@@ -1,14 +1,11 @@
-defmodule AuthServer.Account.User do
+defmodule AuthServer.Accounts.User do
   use Ecto.Schema
   import Ecto.Changeset
 
   schema "users" do
-    field :-, :string
     field :clientId, :string
     field :exp, :integer
     field :name, :string
-    field :"no-context", :string
-    field :"no-schema", :string
     field :secret, :string
     field :token, :string
 

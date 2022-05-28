@@ -10,7 +10,7 @@
 # We recommend using the bang functions (`insert!`, `update!`
 # and so on) as they will fail if something goes wrong.
 
-AuthServer.Repo.insert!(%AuthServer.Account.User{
+AuthServer.Repo.insert!(%AuthServer.Accounts.User{
   clientId: "107635",
   exp: 1653478380,
   name: "Kacper Kubiak",

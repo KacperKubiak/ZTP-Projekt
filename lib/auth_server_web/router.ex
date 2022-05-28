@@ -12,7 +12,6 @@ defmodule AuthServerWeb.Router do
 
   pipeline :api do
     plug :accepts, ["json"]
-    resources "/users", UserController, except: [:new, :edit]
   end
 
   scope "/", AuthServerWeb do
@@ -22,9 +21,13 @@ defmodule AuthServerWeb.Router do
   end
 
   # Other scopes may use custom stacks.
-  # scope "/api", AuthServerWeb do
-  #   pipe_through :api
-  # end
+  scope "/api", AuthServerWeb do
+    pipe_through :api
+    post "/users", UserController, :create
+    get "/users", UserController, :index
+    get "/users/:id", UserController, :show
+
+   end
 
   # Enables LiveDashboard only for development
   #
